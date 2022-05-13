@@ -1,14 +1,50 @@
+@import "~normalize.css";
+@import "fonts.css";
+body{
+  font-family: 'Roboto', sans-serif;
+}
 .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 20;
+  
+}
+textarea{
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.keyboard{
     border: 2px solid black;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .rows{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
   }
   .key{
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     display: flex;
     text-align: center;
     align-items: center;
     border: 2px solid black;
+    cursor: pointer;
+    padding: 2px;
+    font-size: 20px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px #474343, -5px -5px 10px #fff;
+    background: rgb(214, 214, 214);
+  }
+  .key:active{
+    box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+  }
+  .textarea{
+
   }

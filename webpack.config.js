@@ -4,11 +4,12 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: '[hash].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    // assetModuleFilename: 'assets/[path][hash][ext]',
+    clean: true,
   },
-  mode: 'none',
+  mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
@@ -38,6 +39,10 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
