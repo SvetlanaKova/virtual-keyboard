@@ -10,9 +10,9 @@ export default function drowKeyboard (wrapper) {
             out += `<div class="rows">`
           }
           if (i === 13 || i=== 27 || i === 40 || i === 53) {
-            out += `<div class="key" data="${codesArray[i]}">${keyArrays[i]}</div></div>`
+            out += `<div class="key" data-key="${codesArray[i]}">${keyArrays[i]}</div></div>`
           } else {
-            out += `<div class="key" data="${codesArray[i]}">${keyArrays[i]}</div>`
+            out += `<div class="key" data-key="${codesArray[i]}">${keyArrays[i]}</div>`
           }
           
           wrapper.innerHTML = out

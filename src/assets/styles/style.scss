@@ -43,7 +43,16 @@ textarea{
     background: rgb(214, 214, 214);
   }
   .key:active{
+    // transform: scale(0.97);
     box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+  //   transition-property: box-shadow;
+  // transition-duration: 1s;
+  }
+  .key.active{
+    // transform: scale(0.97);
+    box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+  //   transition-property: box-shadow;
+  // transition-duration: 1s;
   }
   .textarea{
 
